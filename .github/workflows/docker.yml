@@ -1,0 +1,17 @@
+name: Docker Image Oluştur
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v3
+
+      - name: Docker image oluştur
+        run: docker build -t benimuygulamam ./3-docker
