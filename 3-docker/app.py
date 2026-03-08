@@ -4,6 +4,6 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Merhaba! Bu benim Docker uygulamam!")
+        self.wfile.write(b"Selama! Bu benim Docker uygulamam!")
 
 HTTPServer(("0.0.0.0", 8080), Handler).serve_forever()
